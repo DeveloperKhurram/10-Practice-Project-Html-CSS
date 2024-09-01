@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Job Application Form" />
+    <!-- ========== Start Google Fonts Section ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ========== End Google Fonts Section ========== -->
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="application">
+        <h1>Job Application <span> (Web Developer) </span></h1>
+        <form action="">
+          <div class="form-data">
+            <fieldset class="normal">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder="Enter First Name"
+                required
+              />
+            </fieldset>
+            <fieldset class="normal">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                placeholder="Enter Last Name"
+                required
+              />
+            </fieldset>
+            <fieldset class="normal">
+              <label for="email">Email</label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Enter Email..."
+                required
+              />
+            </fieldset>
+
+            <fieldset class="normal">
+              <label for="station">Select Desired City</label>
+              <input
+                type="text"
+                list="cities"
+                id="station"
+                name="station"
+                placeholder="Enter City Name"
+              />
+
+              <datalist id="cities">
+                <option value="Karachi"></option>
+                <option value="Lahore"></option>
+                <option value="Islamabad"></option>
+                <option value="Peshawar"></option>
+                <option value="Faisalabad"></option>
+              </datalist>
+            </fieldset>
+
+            <fieldset class="fullWidth">
+              <label for="address">Address</label>
+              <textarea
+                name="address"
+                id="address"
+                cols="50"
+                rows="4"
+                placeholder="Enter your address"
+              ></textarea>
+            </fieldset>
+            <fieldset class="normal">
+              <label for="dob">Date of Birth</label>
+              <input type="date" name="dob" id="dob" value="2024-09-02" />
+            </fieldset>
+
+            <fieldset class="normal">
+              <label for="pin">Pin code</label>
+              <input
+                type="number"
+                name="pin"
+                id="pin"
+                placeholder="Enter pin code"
+              />
+            </fieldset>
+
+            <fieldset class="normal">
+              <label for="jobRole">Job Role</label>
+              <select name="jobRole" id="jobRole">
+                <optgroup label="Frontend">
+                  <option value="html">HTML</option>
+                  <option value="css">CSS</option>
+                  <option value="javascript">JavaScript</option>
+                </optgroup>
+                <optgroup label="Backend">
+                  <option value="nodejs">Node.js</option>
+                  <option value="django">Django</option>
+                  <option value="ruby-on-rails">Ruby on Rails</option>
+                </optgroup>
+              </select>
+            </fieldset>
+
+            <fieldset class="normal">
+              <label for="pin">Pin code</label>
+              <input
+                type="number"
+                name="pin"
+                id="pin"
+                placeholder="Enter pin code"
+              />
+            </fieldset>
+
+            <fieldset class="fullWidth radio">
+              <label for="gender"> Gender </label>
+              <div class="gender">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" checked />
+              </div>
+              <div class="gender">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" />
+              </div>
+            </fieldset>
+
+            <fieldset class="fullWidth checkbox">
+              <label for="relocate"> Are you married</label>
+              <input
+                type="checkbox"
+                name="relocate"
+                id="relocate"
+                value="yes"
+              />
+            </fieldset>
+          </div>
+          <div class="form-btn">
+            <button>Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
