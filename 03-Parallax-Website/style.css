@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+:root {
+  --dark-color: #37323275;
+  --dark-text: #373232;
+  --light-color: #eee7e7;
+}
+html {
+  font-size: clamp(45%, 3vw, 62.5%);
+}
+span {
+  font-size: clamp(2.4rem, 3vw, 6.4rem);
+  padding: 1.2rem;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  box-shadow: 0.8rem 0.8rem 0.8rem #ebeae44d, 0.8rem 0.8rem 0.8rem #791c054d;
+  border-radius: 0.4rem;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  -ms-border-radius: 0.4rem;
+  -o-border-radius: 0.4rem;
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border: 1px solid #2e232363;
+}
+.cover-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/waterfall.jpg");
+  height: 100vh;
+}
+.cover-img2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://www.intrepidtravel.com/adventures/wp-content/uploads/2017/06/Iguazu-Falls-Argentina-or-Brazil-1.jpg");
+  height: 100vh;
+}
+.plitvice {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://retirementtravelers.com/wp-content/uploads/2022/10/Untitled-design-2022-10-25T220336.711.png");
+  height: 40rem;
+}
+.niagara {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://c.wallhere.com/photos/08/d1/Niagara_Falls_USA_waterfall-1440517.jpg!d");
+  height: 40rem;
+}
+.iguazu {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://www.intrepidtravel.com/adventures/wp-content/uploads/2017/06/rsz_website-hero_web-map-brazil_iguazu-falls_green-moss.jpg");
+  height: 40rem;
+}
+.image {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.heading {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+.text {
+  padding: 2.4rem;
+  text-align: center;
+
+  & h2 {
+    margin-bottom: 1.2rem;
+    font-size: clamp(2rem, 2vw, 3.6rem);
+    text-transform: uppercase;
+  }
+
+  & p {
+    letter-spacing: 0.125rem;
+    font-size: clamp(1.2rem, 1vw, 1.6rem);
+  }
+}
+.light {
+  color: var(--dark-text);
+  background-color: var(--light-color);
+}
+.dark {
+  color: var(--light-color);
+  background-color: var(--dark-text);
+}
