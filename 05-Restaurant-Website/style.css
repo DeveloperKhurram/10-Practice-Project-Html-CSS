@@ -321,7 +321,7 @@ footer {
     text-align: center;
   }
 
-  main figure{
+  main figure {
     width: 25rem;
   }
 
@@ -335,11 +335,32 @@ footer {
 }
 
 @media (width <= 788px) {
+  .menu {
+    & h2 {
+      font-size: 2.8rem;
+    }
+
+    & h3 {
+      font-size: 2rem;
+    }
+  }
+  .menu .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+    & .img {
+      grid-row: auto;
+      grid-column: span 1;
+      width: 100%;
+      aspect-ratio: 1;
+    }
+  }
+
   footer .social {
     grid-row: 4/5;
   }
 
-  main figure{
+  main figure {
     width: 15rem;
   }
 }
