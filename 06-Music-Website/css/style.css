@@ -1,0 +1,301 @@
+@import url("responsive.css");
+
+:root {
+  --text-primary: #fff;
+  --text-secondary: #1d172d;
+  --bg-primary: #270082;
+  --bg-secondary: #281154;
+
+  --linear-gradient: linear-gradient(
+    2.25deg,
+    rgba(0, 0, 0, 0.5) 0.68%,
+    rgba(0, 0, 0, 0) 82.95%
+  );
+  --public-linear-gradient: linear-gradient(
+    174.73deg,
+    rgba(3, 0, 12, 0.67) 8.36%,
+    rgba(34, 16, 89, 0.67) 95.78%
+  );
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-primary);
+}
+/* Root font size */
+html {
+  font-size: 62.5%;
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.125rem); /* Adjusts between 16px and 18px */
+}
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Adjusts between 40px and 64px */
+}
+h2 {
+  font-size: clamp(2rem, 4vw, 3.25rem); /* Adjusts between 32px and 52px */
+}
+h3 {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem); /* Adjusts between 28px and 44px */
+}
+h4 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem); /* Adjusts between 24px and 36px */
+}
+h5 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem); /* Adjusts between 20px and 28px */
+}
+h6 {
+  font-size: clamp(1rem, 2vw, 1.5rem); /* Adjusts between 16px and 24px */
+}
+.container {
+  width: 80%;
+  /* padding: clamp(1rem, 2vw, 2rem); */
+  /* Adjusts between 16px and 32px */
+  margin: 0 auto;
+  /* margin: clamp(1rem, 3vw, 3rem) auto; */
+  /* Centered with responsive top/bottom margins */
+}
+button {
+  padding: clamp(0.5rem, 1.5vw, 1rem) clamp(1rem, 2vw, 1.5rem); /* Responsive padding for buttons */
+  margin: clamp(0.25rem, 1vw, 0.75rem); /* Adjusts margins to ensure spacing */
+  background: red;
+}
+section {
+  padding: clamp(2rem, 5vw, 4rem);
+  /* Adjusts between 32px and 64px */
+  /* margin: clamp(2rem, 4vw, 5rem) 0;  */
+  /* Top/bottom margins adjust between 32px and 80px */
+}
+ul {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  padding: 1.2rem 0;
+  background: var(--bg-primary);
+
+  & .logo span {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  & nav {
+    & ul li a {
+      position: relative;
+      transition: all 0.3s linear;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+
+      &::before {
+        content: "";
+        position: absolute;
+        border-bottom: 0.1rem solid var(--text-primary);
+        width: 0;
+        bottom: -30%;
+      }
+
+      &:hover::before {
+        width: 100%;
+      }
+
+      &:hover {
+        color: var(--text-secondary);
+        text-shadow: 0.1rem 0.1rem rgba(255, 255, 255, 0.683);
+      }
+    }
+  }
+}
+
+main {
+  background: var(--linear-gradient), url("../images/hero-image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  gap: 1.2rem;
+
+  & .hero-section .flex {
+    flex-direction: column;
+    gap: 1.6rem;
+
+    & p {
+      width: 70%;
+    }
+  }
+}
+
+.music {
+  /* height: 100vh; */
+  background: var(--bg-secondary);
+
+  & .flex {
+    flex-direction: column;
+  }
+
+  & .detail .flex {
+    flex-direction: column;
+    gap: 2.4rem;
+    margin-bottom: 2.4rem;
+
+    & .title .flex {
+      flex-direction: row;
+    }
+  }
+
+  & .music-collection {
+    width: 80%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    object-fit: cover;
+    margin-bottom: -25%;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.macBook .flex {
+  flex-direction: column;
+  gap: 2.4rem;
+  margin-top: 35%;
+
+  & h4,
+  h5 {
+    color: var(--text-secondary);
+  }
+
+  & h5 {
+    font-weight: 400;
+  }
+
+  & button {
+    outline: none;
+    border: none;
+    background: var(--bg-primary);
+  }
+
+  & .macBook-img {
+    width: 100%;
+    height: auto;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.public-concert {
+  background: var(--public-linear-gradient), url("../images/public-concert.png");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  & .container .flex {
+    flex-direction: column;
+    gap: 2.4rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.gift-card {
+  /* margin: 4.2rem 0; */
+
+  & .flex {
+    gap: 1.2rem;
+    align-items: center;
+    justify-content: center;
+
+    & .image {
+      width: 90%;
+      overflow: hidden;
+      object-fit: cover;
+
+      & img {
+        width: 100%;
+        aspect-ratio: 16/9;
+      }
+    }
+
+    & .text {
+      flex-direction: column;
+      align-items: start;
+      gap: 2.4rem;
+      width: 80%;
+
+      & h3,
+      p {
+        color: var(--text-secondary);
+      }
+
+      & .line-border {
+        border: 0.1rem solid #ccc;
+        width: 100%;
+      }
+
+      & button {
+        background: var(--bg-secondary);
+        border: none;
+      }
+    }
+  }
+}
+
+footer {
+  & .top {
+    background: var(--bg-secondary);
+    padding: 4rem 0;
+
+    & .container .links-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      place-items: center;
+
+      & .links {
+        & h5 {
+          margin-bottom: 2.4rem;
+          border-bottom: 0.1rem solid var(--text-primary);
+          padding-bottom: 0.4rem;
+        }
+
+        & ul {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  & .bottom {
+    background: var(--bg-primary);
+    text-align: center;
+    padding: 1.2rem 0;
+  }
+}
